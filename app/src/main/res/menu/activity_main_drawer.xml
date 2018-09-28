@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Genetic Algorithms">
+        <menu>
+            <item
+                android:id="@+id/nav_nn_all_ones"
+                android:title="All Ones" />
+        </menu>
+    </item>
+
+    <item android:title="Visualizing">
+        <menu>
+            <item
+                android:id="@+id/nav_circle"
+                android:title="Movable Circle" />
+            <item
+                android:id="@+id/nav_koch_line"
+                android:title="Koch Line" />
+            <item
+                android:id="@+id/nav_barnsley_fern"
+                android:title="Barnsley Fern" />
+            <item
+                android:id="@+id/nav_sunflower_math"
+                android:title="Sunflower Math" />
+            <item
+                android:id="@+id/nav_fibonacci_sequence"
+                android:title="Fibonacci Sequence" />
+        </menu>
+    </item>
+
+</menu>
