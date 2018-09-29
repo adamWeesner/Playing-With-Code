@@ -39,16 +39,21 @@ fun map(value: Float, iStart: Float, iStop: Float, eStart: Float, eStop: Float):
 
 var oldTime = System.currentTimeMillis() - 1000
 
-fun fps(canvas: Canvas, paint: Paint) {
+fun calcFPS(): String? {
     val newTime = System.currentTimeMillis()
     val delta = newTime - oldTime
     val fps: Double = (1 / (delta / 1000.toDouble()))
     oldTime = newTime
     val formatter = NumberFormat.getInstance()
+    return formatter.format(fps)
+}
+
+fun fps(canvas: Canvas, paint: Paint) {
+    val fps = calcFPS()
 
     paint.color = Color.BLACK
     paint.textSize = 20.toDP()
-    canvas.drawText("FPS: ${formatter.format(fps)}", 32f, 64f, paint)
+    canvas.drawText("FPS: $fps", 32f, 64f, paint)
 }
 
 val deviceHeight: Int = Resources.getSystem().displayMetrics.heightPixels

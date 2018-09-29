@@ -55,31 +55,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
+        content_main.removeAllViews()
         when (item.itemId) {
             R.id.nav_nn_all_ones -> {
-                content_main.removeAllViews()
                 GenericGA().create(content_main, AllONesGA(100, .001, .95, 2))
             }
-            R.id.nav_circle -> {
-                content_main.removeAllViews()
-                content_main.addView(TouchableCircleCanvas(this))
-            }
-            R.id.nav_koch_line -> {
-                content_main.removeAllViews()
-                content_main.addView(KochLineCanvas(this))
-            }
-            R.id.nav_barnsley_fern -> {
-                content_main.removeAllViews()
-                content_main.addView(BarnsleyFernCanvas(this))
-            }
-            R.id.nav_sunflower_math -> {
-                content_main.removeAllViews()
-                content_main.addView(SunflowerMathCanvas(this))
-            }
-            R.id.nav_fibonacci_sequence -> {
-                content_main.removeAllViews()
-                content_main.addView(FibonacciSequenceCanvas(this))
-            }
+            R.id.nav_circle -> content_main.addView(TouchableCircleCanvas(this))
+            R.id.nav_koch_line -> content_main.addView(KochLineCanvas(this))
+            R.id.nav_barnsley_fern -> content_main.addView(BarnsleyFernCanvas(this))
+            R.id.nav_sunflower_math -> content_main.addView(SunflowerMathCanvas(this))
+            R.id.nav_fibonacci_sequence -> content_main.addView(FibonacciSequenceCanvas(this))
+            R.id.nav_conways_game_of_life -> ConwaysGameOfLife().create(content_main)
         }
 
         title = item.title

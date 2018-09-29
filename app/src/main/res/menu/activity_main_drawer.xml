@@ -28,6 +28,9 @@
             <item
                 android:id="@+id/nav_fibonacci_sequence"
                 android:title="Fibonacci Sequence" />
+            <item
+                android:id="@+id/nav_conways_game_of_life"
+                android:title="Conways Game of Life" />
         </menu>
     </item>
 
